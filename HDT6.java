@@ -144,13 +144,13 @@ public class HDT6 {
           Object element = itrSet2.next();
           System.out.print(element + " ");
       }
-      System.out.print();
       System.out.println("\nSetCelular: ");
       Iterator itrSet3 = SetCell.iterator();
       while(itrSet3.hasNext()){
           Object element = itrSet3.next();
           System.out.print(element + " ");
       }
+      System.out.println();
       System.out.println();
         
         // Mostrar Estadistica1
