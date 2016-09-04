@@ -130,21 +130,21 @@ public class HDT6 {
                 }
             }
         }
+    System.out.println();
     //Referencia de Cada Set
-        System.out.println("\nSetJava: ");
+    System.out.print("\nSetJava: ");
       Iterator itrSet1 = SetJava.iterator();
       while(itrSet1.hasNext()){
           Object element = itrSet1.next();
           System.out.print(element + " ");
       }
-      System.out.println();
-      System.out.println("\nSetWeb: ");
+      System.out.print("\nSetWeb: ");
       Iterator itrSet2 = SetWeb.iterator();
       while(itrSet2.hasNext()){
           Object element = itrSet2.next();
           System.out.print(element + " ");
       }
-      System.out.println();
+      System.out.print();
       System.out.println("\nSetCelular: ");
       Iterator itrSet3 = SetCell.iterator();
       while(itrSet3.hasNext()){
