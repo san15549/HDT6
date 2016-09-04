@@ -130,5 +130,125 @@ public class HDT6 {
                 }
             }
         }
+    //Referencia de Cada Set
+        System.out.println("\nSetJava: ");
+      Iterator itrSet1 = SetJava.iterator();
+      while(itrSet1.hasNext()){
+          Object element = itrSet1.next();
+          System.out.print(element + " ");
+      }
+      System.out.println();
+      System.out.println("\nSetWeb: ");
+      Iterator itrSet2 = SetWeb.iterator();
+      while(itrSet2.hasNext()){
+          Object element = itrSet2.next();
+          System.out.print(element + " ");
+      }
+      System.out.println();
+      System.out.println("\nSetCelular: ");
+      Iterator itrSet3 = SetCell.iterator();
+      while(itrSet3.hasNext()){
+          Object element = itrSet3.next();
+          System.out.print(element + " ");
+      }
+      System.out.println();
+        
+        // Mostrar Estadistica1
+        System.out.print("Desarrolladores Java, Web y Celular: ");
+        Iterator itr = All.iterator();
+        while(itr.hasNext()) {
+            Object element1 = itr.next();
+            System.out.print(element1 + ", ");
+        }
+        System.out.println();
+        // Mostrar Estadistica2
+        System.out.print("Desarrolladores Java Sin Experiencia Web: ");
+        Iterator itr2 = JavaNoWeb.iterator();
+        while(itr2.hasNext()) {
+            Object element2 = itr2.next();
+            System.out.print(element2 + ", ");
+        }
+        System.out.println();
+        // Mostrar Estadistica3
+        System.out.print("Desarrolladores Web y Celular Sin Experiencia Java: ");
+        Iterator itr3 = WebyCell.iterator();
+        while(itr3.hasNext()) {
+            Object element3 = itr3.next();
+            System.out.print(element3 + ", ");
+        }
+        System.out.println();
+        // Mostrar Estadistica4
+        System.out.print("Desarrolladores Web o Celular Sin Experiencia Java: ");
+        Iterator itr4 = WeboCell.iterator();
+        while(itr4.hasNext()) {
+            Object element4 = itr4.next();
+            System.out.print(element4 + ", ");
+        }
+        System.out.println();
+        //Mostrar Estadistica5
+        boolean subconjunto = SetWeb.containsAll(SetJava);
+        if(subconjunto==true){
+            System.out.print("El Conjunto de Desarrolladores Java es un Subconjunto de los Desarrolladores Web.");
+        }
+        else{
+            System.out.print("El Conjunto de Desarrolladores Java no es un Subconjunto de los Desarrolladores Web.");
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        //Mostrar Estadistica6
+        int sizeJava = SetJava.size();
+        int sizeWeb = SetWeb.size();
+        int sizeCell = SetCell.size();
+        if(sizeJava>sizeWeb && sizeJava>sizeCell){
+            System.out.print("EL CONJUNTO JAVA TIENE MAS DESARROLLADORES:");
+            Iterator itrset = SetJava.iterator();
+            while(itrset.hasNext()){
+                Object element = itrset.next();
+                System.out.print(element + ", ");
+            }
+            System.out.println();
+        }
+        else if(sizeWeb>sizeJava && sizeWeb>sizeCell){
+            System.out.print("EL CONJUNTO WEB TIENE MAS DESARROLLADORES:");
+            Iterator itrset = SetWeb.iterator();
+            while(itrset.hasNext()){
+                Object element = itrset.next();
+                System.out.print(element + ", ");
+            }
+            System.out.println();
+        }
+        else if(sizeCell>sizeJava && sizeCell>sizeWeb){
+            System.out.print("EL CONJUNTO CELULAR TIENE MAS DESARROLLADORES:");
+            Iterator itrset = SetCell.iterator();
+            while(itrset.hasNext()){
+                Object element = itrset.next();
+                System.out.print(element + ", ");
+            }
+            System.out.println();
+        }
+        else{
+            System.out.print("NO HAY CONJUNTO MAYOR.");
+        }
+        //Mostrar Estadistica7
+        if(sizeJava>sizeWeb && sizeJava>sizeCell){
+            System.out.println("SUBCONJUNTO JAVA ORDENADO: ");
+            Object[] arrayJava = SetJava.toArray();
+            Arrays.sort(arrayJava);
+            System.out.print(Arrays.toString(arrayJava));
+        }
+        if(sizeWeb>sizeJava && sizeWeb>sizeCell){
+            System.out.println("SUBCONJUNTO WEB ORDENADO: ");
+            Object[] arrayWeb = SetJava.toArray();
+            Arrays.sort(arrayWeb);
+            System.out.print(Arrays.toString(arrayWeb));
+        }
+        if(sizeCell>sizeJava && sizeCell>sizeWeb){
+            System.out.println("SUBCONJUNTO CELULAR ORDENADO: ");
+            Object[] arrayCell = SetJava.toArray();
+            Arrays.sort(arrayCell);
+            System.out.print(Arrays.toString(arrayCell));
+        }
+        System.out.println();
     }
 }
